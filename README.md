@@ -11,6 +11,7 @@
 ### Asociation
   belongs_to :groups, through: :members
   has_many :messages
+  has_many :members
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -21,6 +22,7 @@
 ### Asociation
   has_many :users, through: :members
   has_many :messages
+  has_many :members
 
 ## membersテーブル
 |Column|Type|Options|
