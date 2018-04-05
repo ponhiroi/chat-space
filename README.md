@@ -34,7 +34,7 @@
   belongs_to :user
   belomgs_to :group
 
-##messagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
