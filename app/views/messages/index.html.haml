@@ -1,1 +1,36 @@
-Chat space
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title ChatSpace
+    %link{:href => "https://use.fontawesome.com/releases/v5.0.6/css/all.css", :rel => "stylesheet"}/
+  %body
+  .notification
+  .wrapper
+    .side-bar
+      .side-bar_header
+        .h3 ユーザー名
+        %ul.header_lists
+          %li.list
+            %i.fa.fa-cog.icon.fa-fw
+          %li.list
+            %i.far.fa-edit.fa-fw
+      .groups
+        = render partial: "groups"
+    .chat
+      .chat-header
+        .left-header
+          .left-header_title サンプルグループ①
+          %ul.left-header_members Member : ユーザー名
+        .right-header
+          %a.right-header_button Edit
+      .messages.js-messages
+        = render partial: "messages"
+
+      .form
+        %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        .form_mask
+          %i.far.fa-image
+        %input.form__submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+
