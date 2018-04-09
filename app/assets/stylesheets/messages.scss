@@ -6,117 +6,106 @@ body {
   background-color: #38AEF0;
 }
 .wrapper
-
-.side-bar {
-  height: 100%;
-  width: 300px;
-  float: left;
-  &__header {
-    height: 100px;
-    background-color: #253141;
-    line-height: 100px;
-    padding: 0 20px;
+  .side-bar {
+    height: 100%;
+    width: 300px;
+    float: left;
+    &__header {
+      height: 100px;
+      background-color: #253141;
+      line-height: 100px;
+      padding: 0 20px;
+    }
+      .h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color :white;
+        float: left;
+      }
+      .list {
+        font-size: 16px;
+        color: white;
+        float: right;
+      }
+    .groups {
+      height: calc(100vh - 100px);
+      background-color:#2f3e51;
+    }
+      .group {
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        &__name {
+          font-size: 15px;
+          color: #FFFFFF;
+          padding: 0 0 5px 20px;
+        }
+        &__message {
+          font-size: 11px;
+          color: #FFFFFF;
+          padding: 0 0 0 20px;
+        }
+      }
   }
-}
 
-.h3 {
-  font-size: 16px;
-  font-weight: bold;
-  color :white;
-  float: left;
-}
-
-.list {
-  font-size: 16px;
-  color: white;
-  float: right;
-}
-
-.groups {
-  height: calc(100vh - 100px);
-  background-color:#2f3e51;
-}
-
-.group {
-  box-sizing: border-box;
-  padding: 20px 0 40px;
-  &__name {
-    font-size: 15px;
-    color: #FFFFFF;
-    padding: 0 0 5px 20px;
-  }
-  &__message {
-    font-size: 11px;
-    color: #FFFFFF;
-    padding: 0 0 0 20px;
-  }
-}
 
 .chat{
   height: 100vh;
   width: calc(100% - 300px);
   float: right;
 }
-
-.chat-header {
-  box-sizing: border-box;
-  height: 100px;
-  margin: 0 40px;
-}
-
-.left-header {
-  float: left;
-  &__title {
-    padding: 35px 0  15px 0;
-    font-size: 20px;
-    color: #333333;
+  .chat-header {
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0 40px;
   }
-  &__members {
-    font-size: 12px;
-    color: #999999;
+    .left-header {
+      float: left;
+      &__title {
+        padding: 35px 0  15px 0;
+        font-size: 20px;
+        color: #333333;
+      }
+      &__members {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+  .right-header {
+    border: 1px solid #38AEF0;
+    color: #38AEF0;
+    float: right;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
   }
-}
-
-.right-header {
-  border: 1px solid #38AEF0;
-  color: #38AEF0;
-  float: right;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0 20px;
-}
-
-.messages.js-messages {
-  box-sizing: border-box;
-  height: calc(100vh - 100px - 90px);
-  background-color:#FAFAFA;
-  padding: 46px 40px 0;
-  overflow: scroll;
-}
-
-.message {
+  .messages.js-messages {
+    box-sizing: border-box;
+    height: calc(100vh - 100px - 90px);
+    background-color:#FAFAFA;
+    padding: 46px 40px 0;
+    overflow: scroll;
+  }
+  .message {
   margin-bottom: 40px;
-}
-
-.upper-message {
-  &__user_name {
-    font-size: 16px;
-    font-weight: bold;
-    color: #434A54;
-    display: inline-block;
   }
-  &__date {
-    font-size: 12px;
-    color: #999999;
-    display: inline-block;
-  }
-}
-
-.lower-message {
-  padding-top: 10px;
-  font-size: 14px;
-  color: #434A54;
-}
+    .upper-message {
+      &__user_name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #434A54;
+        display: inline-block;
+      }
+      &__date {
+        font-size: 12px;
+        color: #999999;
+        display: inline-block;
+      }
+    }
+    .lower-message {
+      padding-top: 10px;
+      font-size: 14px;
+      color: #434A54;
+    }
 
 .form {
   box-sizing: border-box;
@@ -124,35 +113,31 @@ body {
   background-color: #DDDDDD;
   padding: 20px 50px 20px 40px;
 }
-
-input#message_content.form__message.js-content {
-  box-sizing: border-box;
-  border: none;
-  float: left;
-  height: 50px;
-  padding: 0 10px;
-  width: calc(100% - 150px);
-}
-
-.form__mask {
-  float: left;
-  line-height: 50px;
-  background-color: #fff;
-  padding-right: 10px;
-}
-
-i.far.fa-image {
-  font-size: 16px;
-  line-height: 50px;
-}
-
-input.form__submit {
-  background-color: #38AEF0;
-  color: #fff;
-  float: right;
-  font-size: 16px;
-  height: 50px;
-  margin-left: 15px;
-  padding: 0 30px;
-}
+  input#message_content.form__message.js-content {
+    box-sizing: border-box;
+    border: none;
+    float: left;
+    height: 50px;
+    padding: 0 10px;
+    width: calc(100% - 150px);
+  }
+  .form__mask {
+    float: left;
+    line-height: 50px;
+    background-color: #fff;
+    padding-right: 10px;
+  }
+    i.far.fa-image {
+      font-size: 16px;
+      line-height: 50px;
+    }
+  input.form__submit {
+    background-color: #38AEF0;
+    color: #fff;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
 
