@@ -20,9 +20,9 @@
     .messages.js-messages
       = render partial: "messages"
     .form
-      %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+      %input#message_content.form__message.js-content{name: "message[content]", placeholder: "type a message", type: "text"}/
       .form__mask
         %i.far.fa-image
-      %input.form__submit{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+      %input.form__submit{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
 
 
