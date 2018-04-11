@@ -1,17 +1,7 @@
 .notification
 .wrapper
   .side-bar
-    .side-bar__header
-      %h3.header__name
-        = current_user.name
-      %ul.header__lists
-        %li.list
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
-        %li.list
-          %i.far.fa-edit.fa-fw
-    .groups
-      = render partial: "groups"
+    = render partial: "side_bar"
   .chat
     .chat-header
       %ul.left-header
