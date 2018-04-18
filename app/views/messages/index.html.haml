@@ -6,15 +6,16 @@
     .chat-header
       %ul.left-header
         %li.left-header__title サンプルグループ①
-        %li.left-header__members Member : ユーザー名
+        %li.left-header__members Member : メンバー
       %ul.right-header
         %li.right-header__button Edit
     .messages.js-messages
-      = render partial: "messages"
+      = render @messages
     .form
-      %input#message_content.form__message.js-content{name: "message[content]", placeholder: "type a message", type: "text"}/
-      .form__mask
-        %i.far.fa-image
-      %input.form__submit{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
-
-
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
