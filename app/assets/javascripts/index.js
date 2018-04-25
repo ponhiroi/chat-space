@@ -13,7 +13,7 @@ function appendUser(user) {
     $("#user-search-result").append(html);
   }
 
-  $(".chat-group-form__input").on("keyup", function() {
+  $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
@@ -21,7 +21,6 @@ function appendUser(user) {
       data: { keyword: input },
       dataType: 'json'
     })
-
     .done(function(users) {
       $("#user-search-result").empty();
       if (users.length !== 0) {
@@ -48,10 +47,10 @@ function appendUser(user) {
   };
 
   $('#user-search-result').on('click', '.chat-group-user__btn--add', function(){
-    var user_id = $(this).attr('data-user-id');
-    var user_name = $(this).attr('data-user-name');
+    var userId = $(this).attr('data-user-id');
+    var userName = $(this).attr('data-user-name');
   $(this).parent().remove();
-    appendUserRemove(user_id, user_name);
+    appendUserRemove(userId, userName);
   });
 
   $('#chat-group-users').on('click', '.chat-group-user__btn--remove', function(){
