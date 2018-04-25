@@ -21,11 +21,11 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+      = f.label :name,"チャットメンバー", id: 'chat_group'
     .chat-group-form__field--right
       #chat-group-users
         #chat-group-user.clearfix
-          =f.text_field :name, name: "group[user_ids][]",type: "hidden", value: "#{current_user.id}"
+          = f.text_field :name, name: "group[user_ids][]",type: "hidden", value: "#{current_user.id}"
           %p.chat-group-user__name
 
   .chat-group-form__field.clearfix
