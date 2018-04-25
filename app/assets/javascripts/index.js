@@ -15,6 +15,8 @@ function appendUser(user) {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    if (input !== "") {
+      console.log('ok')
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -35,6 +37,7 @@ function appendUser(user) {
     .fail(function() {
       alert('ユーザー検索に失敗しました');
     });
+    }
   });
 
     function appendUserRemove(user_id, user_name) {
