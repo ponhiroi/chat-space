@@ -21,8 +21,10 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      = f.label :name,"チャットメンバー", id: 'chat_group'
+      = f.label :name,"チャットメンバー", class: 'chat-group-form__label'
     .chat-group-form__field--right
+      .chat-group-user.clearfix.js-chat-member
+        %p.class.chat-group-user__name #{ current_user.name }
       #chat-group-users
         #chat-group-user.clearfix
           = f.text_field :name, name: "group[user_ids][]",type: "hidden", value: "#{current_user.id}"
