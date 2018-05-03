@@ -36,7 +36,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.messages.js-messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast')
@@ -51,7 +50,6 @@ $(function(){
 
   function getMsg() {
     var newMsgId = $('.message').last().attr('msg-id')
-      console.log(newMsgId)
     var url = $('#new_message').attr('action');
     $.ajax ({
       type: 'GET',
@@ -60,10 +58,8 @@ $(function(){
       dataType: 'json'
     })
     .done(function(data){
-      console.log(data);
       if (data.length == 0) return false
       data.forEach(function(msg) {
-        console.log(data);
         var html = buildHTML(msg)
         $('.messages').append(html)
       })
