@@ -71,5 +71,5 @@ $(function(){
 
     })
   }
-  setInterval(getMsg, 5000)
+  setInterval(getMsg, 1000)
 })
